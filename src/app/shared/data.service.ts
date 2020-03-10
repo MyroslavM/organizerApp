@@ -7,4 +7,9 @@ import {BehaviorSubject} from "rxjs";
 })
 export class DataService {
   public data: BehaviorSubject<moment.Moment> = new BehaviorSubject(moment())
+
+  changeMonth(dir:number){
+    const value = this.data.value.add(dir, 'month')
+    this.data.next(value)
+  }
 }

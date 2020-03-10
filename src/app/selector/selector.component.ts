@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DataService} from "../shared/data.service";
 
 @Component({
   selector: 'app-selector',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SelectorComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dateService: DataService) { }
+
+  go(dir : number){
+    this.dateService.changeMonth(dir)
+  }
 
   ngOnInit() {
   }
