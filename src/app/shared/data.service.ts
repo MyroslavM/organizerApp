@@ -12,4 +12,12 @@ export class DataService {
     const value = this.data.value.add(dir, 'month')
     this.data.next(value)
   }
+
+  changeDate(date:moment.Moment){
+    const value = this.data.value.set({
+      date: date.date(),
+        month: date.month()
+    })
+    this.data.next(value)
+  }
 }
