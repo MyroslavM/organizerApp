@@ -16,7 +16,7 @@ interface CreateResponse {
 
 @Injectable({providedIn: 'root'})
 export class TasksService {
-  static url = 'https://organizerapp-a6481.firebaseio.com/'
+  static url = 'https://organizerapp-a6481.firebaseio.com'
 
   constructor(private http: HttpClient) {
   }
